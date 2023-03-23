@@ -110,11 +110,32 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "Choose an action:";
     }
 
+    IEnumerator PlayerSkill()
+    {
+        playerUnit.Skill(5);
+
+        playerHUD.SetHealth(playerUnit.currentHealth);
+        dialogueText.text = "You feel renewed strength";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+
     public void OnAttackButton()
     {
         if(state != BattleState.PLAYERTURN)
             return;
 
         StartCoroutine(PlayerAttack());
+    }
+
+    public void OnSkillButton()
+    {
+        if(state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerSkill());
     }
 }

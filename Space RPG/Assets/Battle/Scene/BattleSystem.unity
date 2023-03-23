@@ -475,7 +475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.12, y: -0.027}
+  m_AnchoredPosition: {x: 0.138, y: -0.045}
   m_SizeDelta: {x: 38.58669, y: 17.14837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230569981
@@ -1023,7 +1023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.81, y: -0.023}
+  m_AnchoredPosition: {x: 0.82799995, y: -0.041}
   m_SizeDelta: {x: 19.23805, y: 17.977}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540518802
@@ -1223,7 +1223,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 0
-  m_TargetGraphic: {fileID: 320657322}
+  m_TargetGraphic: {fileID: 1481923390}
   m_FillRect: {fileID: 1844791203}
   m_HandleRect: {fileID: 1825507402}
   m_Direction: 0
@@ -1270,7 +1270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.521, y: -0.025}
+  m_AnchoredPosition: {x: 0.539, y: -0.042999998}
   m_SizeDelta: {x: 25.15819, y: 17.0027}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853901351
@@ -1358,7 +1358,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 853901351}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 62055776}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnSkillButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &918507392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,7 +1843,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 0
-  m_TargetGraphic: {fileID: 2093384477}
+  m_TargetGraphic: {fileID: 1844791204}
   m_FillRect: {fileID: 1481923389}
   m_HandleRect: {fileID: 49469563}
   m_Direction: 0

@@ -22,4 +22,11 @@ public class Unit : MonoBehaviour
         else
             return false;
     }
+
+    public void Skill(int amount)
+    {
+        currentHealth += amount;
+        if(currentHealth > maxHealth)
+            currentHealth = maxHealth;
+    }
 }
