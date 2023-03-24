@@ -19,7 +19,7 @@ public class BattleStart : MonoBehaviour
             //finishSound.Play();
             Destroy(this.gameObject);
             isDead = true;
-            SceneManager.LoadScene("TestTransScene", LoadSceneMode.Additive);
+            SceneManager.LoadScene("TestTransScene");
         }
     }
 
