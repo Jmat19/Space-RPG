@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class BattleStart : MonoBehaviour
 {
-    //private AudioSource finishSound;
+
+    private bool isDead;
     private void Start()
     {
-        //finishSound = GetComponent<AudioSource>();
+        kys();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,8 +17,17 @@ public class BattleStart : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             //finishSound.Play();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            isDead = true;
             SceneManager.LoadScene("TestTransScene", LoadSceneMode.Additive);
+        }
+    }
+
+    private void kys()
+    {
+        if (isDead == true)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
