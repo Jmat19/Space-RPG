@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlayableCharacter
+public class Enemy
 {
     public string name;
+
+    public enum Type
+    {
+        GRUNT,
+        BOSS
+    }
+
+    public Type EnemyType;
 
     public float maxHP;
     public float currentHP;
 
-    public float maxSP;
-    public float currentSP;
+    public float baseATK;
+    public float baseDEF;
 }
