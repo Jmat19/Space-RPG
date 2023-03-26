@@ -8,4 +8,12 @@ public class ExitBattle : MonoBehaviour
     {
         SceneManager.LoadScene("ExplorationTest");
     }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            ExitBattlez();
+        }
+    }
 }

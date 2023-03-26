@@ -7,7 +7,15 @@ public class CameraFollow : MonoBehaviour
     public float FollowSpeed = 2f;
     public float yOffset =1f;
     public Transform target;
-
+    Values values;
+    void Awake()
+        {
+            values = GameObject.Find("Godsend").GetComponent<Values>();
+        }
+    void Start()
+    {
+        transform.position = new Vector2(values.heldposX, values.heldposY);
+    }
     // Update is called once per frame
     void Update()
     {
