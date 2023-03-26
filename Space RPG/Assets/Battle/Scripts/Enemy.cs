@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Enemy
+public class Enemy: BaseClass
 {
-    public string name;
-
     public enum Type
     {
         GRUNT,
@@ -15,9 +13,9 @@ public class Enemy
 
     public Type EnemyType;
 
-    public float maxHP;
+    /*public float maxHP;
     public float currentHP;
 
     public float baseATK;
-    public float baseDEF;
+    public float baseDEF;*/
 }

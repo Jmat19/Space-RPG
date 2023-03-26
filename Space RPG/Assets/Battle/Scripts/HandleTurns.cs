@@ -6,8 +6,10 @@ using UnityEngine;
 public class HandleTurns
 {
     public string Attacker; //name of attacker
+    public string Recon;
     public GameObject AttackersGameObject; //who attacks
     public GameObject AttackersTarget; //who is being attacked
 
     //which attack is performed
+    public BaseAttack chosenAttack;
 }

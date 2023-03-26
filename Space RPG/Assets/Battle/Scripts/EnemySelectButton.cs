@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject EnemyPrefab;
+    private bool showSelector;
+
+    public void SelectEnemy()
     {
-        
+        GameObject.Find("BattleManager").GetComponent<BattleStateMachine>().Input2(EnemyPrefab); //save input enemy prefab
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HideSelector()
     {
-        
+            EnemyPrefab.transform.FindChild("Selector").gameObject.SetActive(false);
+    }
+
+    public void ShowSelector()
+    {
+            EnemyPrefab.transform.FindChild("Selector").gameObject.SetActive(true);
     }
 }
