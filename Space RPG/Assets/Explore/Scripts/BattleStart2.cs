@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BattleStart : MonoBehaviour
+public class BattleStart2 : MonoBehaviour
 {
     Values values;
     PlayerMovement playerMovement;
@@ -21,7 +21,7 @@ public class BattleStart : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            values.enemy1dead = true;
+            values.enemy3dead = true;
             values.heldposX = playerMovement.rb.position.x;
             values.heldposY = playerMovement.rb.position.y;
             Destroy(this.gameObject);
@@ -31,7 +31,7 @@ public class BattleStart : MonoBehaviour
 
     private void kys()
     {
-        if (values.enemy1dead == true)
+        if (values.enemy3dead == true)
         {
             Destroy(this.gameObject);
         }
