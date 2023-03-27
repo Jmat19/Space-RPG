@@ -5,12 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class DeleteSelf : MonoBehaviour
 {
+    SceneMana sceneMana;
     public GameObject image1;
     public GameObject image2;
+    public GameObject deleteplease;
     Text text;
+    public float waitTime;
+    public Animator musicAnim;
     void Awake()
     {
         text = GameObject.Find("Text").GetComponent<Text>();
+        sceneMana = GameObject.Find("SceneManager").GetComponent<SceneMana>();
     }
     void Update()
     {
@@ -21,7 +26,13 @@ public class DeleteSelf : MonoBehaviour
         
         if (text.index == 2)
         {
+            Destroy (deleteplease);
             SceneManager.LoadScene("ExplorationTest");
         }
     }
+    public IEnumerator ChangeScene(){
+        musicAnim.SetTrigger("fadeOut");
+        yield return new WaitForSeconds(waitTime);
+    }
+
 }
